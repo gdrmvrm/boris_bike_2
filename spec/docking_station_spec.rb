@@ -37,5 +37,10 @@ describe DockingStation do
     subject.dock(bike)
     expect(subject.bike).to eq bike
   end
- 
+  
+  it 'raises an error when trying to dock one more bike' do
+    bike = Bike.new
+    subject.dock(bike)
+    expect {subject.dock(bike)}.to raise_error("Docking station full")
+  end
 end
