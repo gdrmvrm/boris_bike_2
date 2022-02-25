@@ -2,7 +2,7 @@
 
 First pairing challenge during week 1 of the Makers Academy course.
 
-Pairing partners: [Valentina Maggio](https://github.com/valentina-maggio) and [Jonny Abrams](https://github.com/jonnyabrams)
+Pairing partners: [Valentina Maggio](https://github.com/valentina-maggio) and [Gayathri Dharmavaram](https://github.com/gdrmvrm)
 
 
 ## User Stories Keywords
