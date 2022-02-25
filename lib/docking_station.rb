@@ -11,7 +11,7 @@ class DockingStation
   end
 
   def release_bike
-    raise "No bikes available" if empty?# guard condition using raise method
+    raise "No bikes available" if empty? # guard condition using raise method
     @bikes.pop
   end
 
@@ -19,7 +19,6 @@ class DockingStation
     raise "Docking station full" if full?
     @bikes << bike
   end
-
 
   private
 
