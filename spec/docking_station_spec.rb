@@ -14,6 +14,7 @@ describe DockingStation do
 
   it 'releases a bike' do
     bike = Bike.new
+    
     subject.dock(bike)
     expect(subject.release_bike).to eq bike
   end
@@ -29,18 +30,22 @@ describe DockingStation do
 
   it 'docks a bike' do
     bike = Bike.new
-    expect(subject.dock(bike)).to eq bike
+    expect(subject.bikes.count).to eq 0
+    subject.dock(bike)
+    expect(subject.bikes.count).to eq 1
   end
 
-  it 'can show a bike that is docked' do
-    bike = Bike.new
-    subject.dock(bike)
-    expect(subject.bike).to eq bike
-  end
+  # ..... this test has been removed because it is no longer relevant
+  #  as now the new instance of docking station can hold upto 20 bikes.
+  # it 'can show a bike that is docked' do
+  #   bike = Bike.new
+  #   subject.dock(bike)
+  #   expect(subject.bike).to eq bike
+  # end
   
   it 'raises an error when trying to dock one more bike' do
     bike = Bike.new
-    subject.dock(bike)
+    20.times { subject.dock bike }
     expect {subject.dock(bike)}.to raise_error("Docking station full")
   end
 end
